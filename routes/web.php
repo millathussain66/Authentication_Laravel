@@ -17,9 +17,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('millat/{id}', function ($id) {
+Auth::routes();
 
-    return $id;
-    return "Bangladesh";
-
-});
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
